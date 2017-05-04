@@ -1,2 +1,2 @@
 # Line-bot-php
-Chatbot
+Line Chatbot for cs446
