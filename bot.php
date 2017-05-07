@@ -29,10 +29,11 @@ if (!is_null($events['events'])) {
 			];
 			
 			
-			if((eregi ( "cs442", $text ))or(eregi ( "คพ442", $text ))){
+			
+				if((eregi ( "ตำรวจ", $text ))or(eregi ( "แจ้งตำรวจ", $text ))){
 				$messages = [
 					'type'=>'text',
-					'text' =>'ลองไปดูในนี้นะ มีรายละเอียดอยู่ http://reg.mju.ac.th/enrollguide.htm'
+					'text' =>'โทรเลย เบอร์ 191'
 				];
 			}else if((eregi ( "Chatbot", $text, $regs ))or(eregi ( "Line bot", $text, $regs ))){
 				$messages = [
@@ -45,38 +46,58 @@ if (!is_null($events['events'])) {
 					'text' =>'สวัสดีครับ
 '
 				];
-			}else if((eregi ( "อยากกลับบ้าน", $text ))or(eregi ( "คิดถึงบ้าน", $text ))){
+			}else if((eregi ( "น้ำไม่ไหล", $text ))or(eregi ( "ประปา", $text ))){
 				$messages = [
 					'type'=>'text',
-					'text' =>'จองตั๋วเครื่องบินสิครับ รถทัวร์ก็ได้นะ'
+					'text' =>'เรียกประปาโทร 1162 หรือ http://www.pwa.co.th/contactus/telephone ครับ'
 				];
-			}else if((eregi ( "ขาดความอบอุ่น", $text, $regs ))or(eregi ( "ต้องการคนสนใจ", $text, $regs ))or(eregi ( "อยากให้มีคนสนใจ", $text, $regs ))){
+			}else if((eregi ( "หิว", $text, $regs ))or(eregi ( "สั่งไก่", $text, $regs ))or(eregi ( "อยากกินไก่", $text, $regs ))){
 				$messages = [
 					'type'=>'text',
-					'text' =>'ถ้าอยากให้ใครดีกับเราเราต้องทำดีกับเขาก่อนดูครับ'
+					'text' =>'กินไก่อะไรดีล่ะ ? 
+					1.ไก่ KFC โทร 1150 แล้วกด 1,
+					2. ไก่ McDonulds โทร 1711, 
+					3. ไก่ เชสเตอร์กิลล์ โทร 1125
+'
 				];
-			}else if((eregi ( "โดนเท", $text ))or(eregi ( "ผู้หญิงทิ้ง", $text ))){
+			}else if((eregi ( "ไฟดับ", $text ))or(eregi ( "ไฟฟ้า", $text ))){
 				$messages = [
 					'type'=>'text',
-					'text' =>'เป็นกำลังใจให้นะ พยายามเข้าล่ะ'
+					'text' =>'โทรเลยครับ เบอร์ 1129 หรือที่ https://www.pea.co.th/ติดต่อเรา'
 				];
-			}else if((eregi ( "หน้ากากทุเรียน", $text ))or(eregi ( "The mask singer", $text ))){
+			}else if((eregi ( "ไฟไหม้", $text ))or(eregi ( "ดับเพลิง", $text ))){
 				$messages = [
 					'type'=>'text',
-					'text' =>'ดีต่อใจฝุดๆ เพลงเพราะมาก'
+					'text' =>'โทรเลยครับ เบอร์ 199'
 				];
 				
-			}else if((eregi ( "ผู้หญิงชอบคนเลว", $text ))or(eregi ( "ทำดีไปก็เท่านั้น", $text ))){
+			}else if((eregi ( "อสังหาริมทรัพย์", $text ))or(eregi ( "ที่อยู่อาศัย", $text ))){
 				$messages = [
 					'type'=>'text',
-					'text' =>'ผู้หญิงจิตใจลึกลับซับซ้อนยิ่งกว่าเขาวงกต คนดีๆมีก็ไม่เลือก ชอบคนเลวได้ไงไม่เข้าใจเหมือนกัน'
+					'text' =>'เลือกซื้อที่อยู่อาศัย อสังหาริมทรัพย์ หรือปรึกษาด้านต่างๆ เกี่ยวกับ Property ที่ http://www.reic.or.th/Default.aspx'
 				];
 			
-			}else if((eregi ( "ลืมเค้าไม่ได้", $text ))or(eregi ( "ทำไมถึงโดนทิ้ง", $text ))){
+			}else if((eregi ( "สั่งพิซซ่า", $text ))or(eregi ( "พิซซ่า", $text ))){
 				$messages = [
 					'type'=>'text',
-					'text' =>'ผู้หญิงก็แบบนี้ล่ะครับ ตาบอดกันทั้งนั้น'
-				];	
+					'text' =>'สั่งพิซซ่ามาทานร้านไหนดี ?
+					1.The Pizza โทร 1112 หรือ 2.Pizza Hut โทร 1150 กด 2'
+				];
+			}else if((eregi ( "ปรึกษาทางด้านการเงิน", $text ))or(eregi ( "การเงิน", $text ))){
+				$messages = [
+					'type'=>'text',
+					'text' =>'ไปที่ www.pd-wealth.com/ ที่ปรึกษาทางด้านการเงินครบวงจรหรือโทร 1235'
+				];
+			}else if((eregi ( "ช่างซ่อมเครื่องใช้ไฟฟ้า", $text ))or(eregi ( "ช่างซ่อมของใช้", $text ))){
+				$messages = [
+					'type'=>'text',
+					'text' =>'โทรไปที่เบอร์ 0847460000 ในเชียงใหม่ หรือ www.fixeletric.com ทั่วประเทศ'
+				];
+			}else if((eregi ( "ซื้อสินค้า", $text ))or(eregi ( "Shopping", $text ))){
+				$messages = [
+					'type'=>'text',
+					'text' =>'www.lazada.co.th หรือโทร 020180000 ทั่วประเทศ'
+				];				
 			}else if((eregi ( "บาย", $text ))or(eregi ( "ลาก่อน", $text ))){
 				$messages = [
 					'type'=>'text',
