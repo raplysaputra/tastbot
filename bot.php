@@ -98,6 +98,21 @@ if (!is_null($events['events'])) {
 					'type'=>'text',
 					'text' =>'www.lazada.co.th หรือโทร 020180000 ทั่วประเทศ'
 				];				
+			}else if((eregi ( "อยากกลับบ้าน", $text ))or(eregi ( "คิดถึงบ้าน", $text ))){
+				$messages = [
+					'type'=>'text',
+					'text' =>'จองตั๋วเครื่องบินสิครับ รถทัวร์ก็ได้นะ'
+				];
+			}else if((eregi ( "ขาดความอบอุ่น", $text, $regs ))or(eregi ( "ต้องการคนสนใจ", $text, $regs ))or(eregi ( "อยากให้มีคนสนใจ", $text, $regs ))){
+				$messages = [
+					'type'=>'text',
+					'text' =>'ถ้าอยากให้ใครดีกับเราเราต้องทำดีกับเขาก่อนดูครับ'
+				];
+			}else if((eregi ( "โดนเท", $text ))or(eregi ( "ผู้หญิงทิ้ง", $text ))){
+				$messages = [
+					'type'=>'text',
+					'text' =>'เป็นกำลังใจให้นะ พยายามเข้าล่ะ'
+				];
 			}else if((eregi ( "บาย", $text ))or(eregi ( "ลาก่อน", $text ))){
 				$messages = [
 					'type'=>'text',
